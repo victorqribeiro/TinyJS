@@ -23,4 +23,6 @@
     elm.append(...args.map(a => typeof a == 'string' ? document.createTextNode(a) : a))
     return elm
   })
+  window['$'] = elm => document.querySelector(elm)
+  window['$all'] = elm => Array.from(document.querySelectorAll(elm))
 })()

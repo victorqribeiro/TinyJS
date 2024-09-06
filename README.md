@@ -42,7 +42,7 @@ You can deeply assign properties to elements:
 
 ```javascript
 const styledButton = button(
-  {style: {backgroundColor: 'blue', color: 'white'}}, 
+  {style: {backgroundColor: 'blue', color: 'white'}, onclick: () => alert('you clicked me')}, 
   'Click Me!'
 );
 

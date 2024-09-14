@@ -24,5 +24,5 @@
     return elm
   })
   window['$'] = selector => document.querySelector(selector)
-  window['$$'] = window['$all'] = selector => Array.from(document.querySelectorAll(selector))
+  window['$$'] = selector => Array.from(document.querySelectorAll(selector))
 })()

@@ -17,7 +17,7 @@
     'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 
     'ul', 'var', 'video', 'wbr'
   ].forEach(tag => window[tag] = function(...args) {
-    const props = typeof args[0] == 'object' ? args.shift() : null
+    const props = typeof args[0] == 'object' && !(args[0] instanceof HTMLElement) ? args.shift() : null
     const elm = document.createElement(tag)
     props && assignDeep(elm, props)
     elm.append(...args.map(a => typeof a == 'string' ? document.createTextNode(a) : a))

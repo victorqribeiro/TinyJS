@@ -1,0 +1,20 @@
+{
+  "name": "tinyjs",
+  "version": "1.1.0",
+  "description": "Tiny JavaScript framework",
+  "main": "tiny.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorqribeiro/TinyJS.git"
+  },
+  "keywords": [
+    "javascript",
+    "framework"
+  ],
+  "author": "Victor Ribeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victorqribeiro/TinyJS/issues"
+  },
+  "homepage": "https://github.com/victorqribeiro/TinyJS#readme"
+}

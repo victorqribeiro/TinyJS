@@ -4,6 +4,7 @@
   "description": "Tiny JavaScript framework",
   "main": "tiny.js",
   "exports": "./tiny.js",
+  "files": ["tiny.js"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/victorqribeiro/TinyJS.git"

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES5", // The compiled code will be compatible with ES5
+    "module": "ESNext",
+    "lib": [
+      "ES2019",
+      "DOM"
+    ], // We will use ES6+ modules
+    "outDir": "./dist", // Output folder for compiled files
+    "rootDir": "./src", // Directory from where the source files will be compiled
+    "strict": true, // Enables strict type checking
+    "esModuleInterop": true, // Allows default imports from CommonJS modules
+    "skipLibCheck": true, // Skips library checking
+    "forceConsistentCasingInFileNames": true // Ensures consistent casing in file names
+  },
+  "include": [
+    "src/**/*.ts" // Includes all TypeScript files within src/
+  ],
+  "exclude": [
+    "node_modules" // Excludes the node_modules folder
+  ]
+}

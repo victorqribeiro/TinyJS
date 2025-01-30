@@ -2,13 +2,15 @@
   "name": "tinyjs-framework",
   "version": "1.1.3",
   "description": "Tiny JavaScript framework",
-  "main": "tiny.js",
-  "type": "module",
-  "exports": {
-    "import": "./tiny.js",
-    "require": "./tiny.js"
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
   },
-  "files": ["tiny.js"],
+  "type": "module",
+  "files": [
+    "dist/**/*"             
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/victorqribeiro/TinyJS.git"
@@ -16,11 +18,14 @@
   "keywords": [
     "javascript",
     "framework"
-  ],
+  ],  
   "author": "Victor Ribeiro",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/victorqribeiro/TinyJS/issues"
   },
-  "homepage": "https://github.com/victorqribeiro/TinyJS#readme"
+  "homepage": "https://github.com/victorqribeiro/TinyJS#readme",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
 }

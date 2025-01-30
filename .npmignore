@@ -1,0 +1,4 @@
+src/
+.github/
+tsconfig.json
+.gitignore

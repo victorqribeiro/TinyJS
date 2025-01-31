@@ -55,6 +55,12 @@ Simply include the **tiny.js** file in your project:
 <script src="tiny.js"></script>
 ```
 
+[npm package](https://www.npmjs.com/package/tinyjs-framework)
+
+```bash
+npm install tinyjs-framework
+```
+
 ### Advanced Example
 
 You can deeply assign properties to elements:

@@ -7,7 +7,11 @@
 - **Deep property assignment**: Supports nested property structures for complex elements.
 - **Simplified content appending**: Accepts strings or elements as child content.
 - **DOM element selection**: Use `$` and `$$()` to select elements from the DOM.
-- **Reactive State Management**: Utilize `createState` for reactive data binding. See this [repository](https://github.com/victorqribeiro/TinyApp) for an example using this new function. 
+- **Reactive State Management**: Utilize `createState` for reactive data binding.
+
+## Examples
+- [TinyApp](https://github.com/victorqribeiro/TinyApp)
+- [TodoApp](https://github.com/victorqribeiro/TodoApp)
 
 ## How It Works
 TinyJS attaches functions for each HTML tag (like `div`, `span`, `a`, etc.) to the global window object. You can create elements by simply calling the tag name as a function, passing in optional properties and child elements.

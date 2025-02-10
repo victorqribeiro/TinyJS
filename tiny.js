@@ -1,8 +1,5 @@
 (() => {
-  const assignDeep = (elm, props) => Object.entries(props).forEach(([key, value]) =>
-    typeof value === 'object' ? assignDeep(elm[key], value) : Object.assign(elm, {[key]: value}))
-
-  const tagNames = [
+  Array.from([
     'a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base',
     'bdi', 'bdo', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 
     'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 
@@ -16,7 +13,7 @@
     'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'template', 
     'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 
     'ul', 'var', 'video', 'wbr'
-  ].forEach(tag => window[tag] = function(...args) {
+  ]).forEach(tag => window[tag] = function(...args) {
     const props = typeof args[0] == 'object' && !(args[0] instanceof HTMLElement) ? args.shift() : null
     const elm = document.createElement(tag)
     props && assignDeep(elm, props)

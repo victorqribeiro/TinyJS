@@ -26,10 +26,9 @@
   window['$'] = selector => document.querySelector(selector)
   window['$$'] = selector => Array.from(document.querySelectorAll(selector))
   window['createState'] = state => {
-    const appState = { ...state }
-    appState._updates = Object.fromEntries(Object.keys(state).map(s => [s, []]))
-    appState._update = s => appState._updates[s].forEach(u => u())
-    appState.addUpdate = (s, u) => appState._updates[s].push(u)
-    return new Proxy(appState, {set(o, p, v) {o[p] = v; o._update(p); return true}})
+    state._updates = Object.fromEntries(Object.keys(state).map(s => [s, []]))
+    state._update = s => state._updates[s].forEach(u => u())
+    state.addUpdate = (s, u) => state._updates[s].push(u)
+    return new Proxy(state, {set(o, p, v) {o[p] = v; o._update(p); return true}})
   }
 })()

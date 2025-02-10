@@ -1,4 +1,8 @@
 (() => {
+  const assignDeep = (elm, props) => Object.entries(props).forEach(([key, value]) => {
+    if (typeof value === 'object') return assignDeep(elm[key], value)
+    try { Object.assign(elm, {[key]: value}) } catch { elm.setAttribute(key, value) }
+  })
   Array.from([
     'a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base',
     'bdi', 'bdo', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 
